@@ -1,0 +1,3 @@
+[registry."registry.tekqube.lan:32000"]
+  http = true
+  insecure = true

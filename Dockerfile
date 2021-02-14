@@ -1,7 +1,11 @@
-FROM golang:1.12 as builder
+FROM --platform=${BUILDPLATFORM} golang:1.12 as builder
+ARG TARGETOS
+ARG TARGETARCH
+
+ENV CGO_ENABLED=0
 
 ADD my-app.go /src/my-app.go
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags="-w -s" -o /dist/my-app /src/my-app.go
+RUN GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -ldflags="-w -s" -o /dist/my-app /src/my-app.go
 
 FROM scratch
 
