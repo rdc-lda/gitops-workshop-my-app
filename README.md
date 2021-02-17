@@ -1,6 +1,6 @@
 # My App
 
-Build a sample Golang application + Docker for `linux/amd64` and `linux/arm64` platforms and push to private (insecure) registry.
+Build a sample Golang application + Docker for `linux/amd64` and `linux/aarch64` platforms and push to private (insecure) registry.
 
 > Based upon [Tutorial: Everything You Need To Become a GitOps Ninja - Alex Collins & Alexander Matyushentsev](https://www.youtube.com/watch?v=r50tRQjisxw), modified for the video series "Bank of Pi" to explain the concept of GitOps.
 ## Setup your build environment
